@@ -31,13 +31,19 @@ HRESULT Direct3DWrapper::CreateDevice(UINT Adapter, D3DDEVTYPE DeviceType, HWND 
 
 ULONG Direct3DWrapper::Release(void) {
     ULONG result = orig->Release();
-    delete this;
+    if (result == 0) {
+        delete this;
+    }
+
     return result;
 }
 
 ULONG Direct3DDeviceWrapper::Release(void) {
     ULONG result = orig->Release();
-    delete this;
+    if (result == 0) {
+        delete this;
+    }
+
     return result;
 }
 
