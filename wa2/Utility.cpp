@@ -1,8 +1,6 @@
 #include "Utility.h"
 
-LPCSTR Utility::getResourcePath(LPCSTR filename) {
-    CHAR buf[MAX_PATH];
-
+LPCSTR Utility::getResourcePath(LPCSTR filename, CHAR buf[MAX_PATH]) {
     DWORD result = GetFullPathNameA(
         filename,
         MAX_PATH,

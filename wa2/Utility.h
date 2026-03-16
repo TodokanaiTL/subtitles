@@ -13,7 +13,7 @@ namespace Utility {
 
         This can be retooled to use GetFullPathNameW if that proves necessary.
     */
-    LPCSTR getResourcePath(LPCSTR filename);
+    LPCSTR getResourcePath(LPCSTR filename, CHAR buf[MAX_PATH]);
     
     /*
         Does the todokanai directory exist in the root of the project?
