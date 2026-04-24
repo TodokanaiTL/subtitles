@@ -26,11 +26,12 @@ TextRenderer::TextRenderer(LPDIRECT3DDEVICE9 device) {
 }
 
 HRESULT TextRenderer::init() {
+    CHAR buf[MAX_PATH];
     HRESULT result;
 
     result = D3DXCreateTextureFromFileEx(
         this->device,
-        Utility::getResourcePath(".\\todokanai\\font.png"),
+        Utility::getResourcePath(".\\todokanai\\font.png", buf),
         FONT_FILE_WIDTH,
         FONT_FILE_HEIGHT,
         D3DX_DEFAULT,

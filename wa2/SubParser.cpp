@@ -60,7 +60,8 @@ subtitle_t parseSub(std::vector<std::string>& file, int& i) {
 }
 
 std::vector<subtitle_t> parseSubs() {
-    const char* filename = Utility::getResourcePath(".\\todokanai\\subtitles");
+    CHAR buf[MAX_PATH];
+    const char* filename = Utility::getResourcePath(".\\todokanai\\subtitles", buf);
     std::vector<std::string> lines;
 
     readFile(filename, lines);
