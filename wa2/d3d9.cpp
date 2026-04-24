@@ -15,11 +15,11 @@ callback_t realCreate;
 
 extern "C" __declspec(dllexport) IDirect3D9 * WINAPI Direct3DCreate9Hook(UINT SDKVersion) {
     if (!hDX) {
-        TCHAR buffer[MAX_PATH];
-        GetSystemDirectory(buffer, MAX_PATH);
-        strncat_s(buffer, "\\d3d9.dll", MAX_PATH);
+        CHAR buffer[MAX_PATH];
+        GetSystemDirectoryA(buffer, MAX_PATH);
+        strncat_s(buffer, MAX_PATH, "\\d3d9.dll", _TRUNCATE);
 
-        hDX = LoadLibrary(buffer);
+        hDX = LoadLibraryA(buffer);
 
         if (!hDX) {
             MessageBoxA(0, "could not load", 0, 0);

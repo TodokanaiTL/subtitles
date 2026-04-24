@@ -29,7 +29,7 @@ HRESULT TextRenderer::init() {
     CHAR buf[MAX_PATH];
     HRESULT result;
 
-    result = D3DXCreateTextureFromFileEx(
+    result = D3DXCreateTextureFromFileExA(
         this->device,
         Utility::getResourcePath(".\\todokanai\\font.png", buf),
         FONT_FILE_WIDTH,
