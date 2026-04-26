@@ -3,7 +3,7 @@
 ![screenshot](screenshot.png)
 
 ## Setting up the project
-- obviously you need to configure this project with VS community (I use 2019)
+- Obviously you need to configure this project with VS community (2022).
 - You need to install DirectX 9.0 June 2010 SDK from Microsoft.
 
 Configure the compilation settings to output a single DLL titled `d3d9.dll` and place this in the root of the White Album 2 install folder.
@@ -62,10 +62,6 @@ Each line is `[start ms] [duration ms] text until newline`
 **Q**: This causes a crash on the Japanese EXE.
 
 **A**: This is designed only for the English EXE.
-
-**Q**: This causes a crash when running in WINE.
-
-**A**: There is some weirdness in WINE that I haven't really tracked down but the crash is really rare so my advice is just "**save often**".
 
 **Q**: I locked my PC with White Album 2 running and now subtitles don't play.
 
